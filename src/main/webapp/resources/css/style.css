@@ -1,0 +1,24 @@
+@charset "UTF-8";
+body{
+	background-image: url("https://pbs.twimg.com/media/Ddyfl16VwAAQCZj?format=jpg&name=medium");
+	background-color: skyblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 98vh;
+}
+a{
+	 text-decoration:none;
+	 color: #000;
+}
+h2{
+	text-align: center;
+	text-shadow: 1px 1px grey;
+}
+#box{
+	box-shadow: 4px 4px grey;
+	padding: 3%;
+	background-color: #fff;
+	line-height:2;
+}
