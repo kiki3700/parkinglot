@@ -14,9 +14,9 @@
     <body>
     <div id="box">
         <h2>정기권 구매</h2>
-        <form id="reservationTicketForm" name="reservastionTicketForm" action="./process.jsp" method="GET">
+        <form id="reservationTicketForm" name="reservastionTicketForm" action="/Parkinglot/checkCarInfo" method="GET">
             <label for="carNum">차량번호 : </label>
-            <input type="text" name="carNumber" required><br>
+            <input type="text" name="carNum" required><br>
             <label for="beginOfTicket">정기권 시작 일자 : </label>
             <input type="date" name="beginOfTicket" required><br>
             <label for="seasonTicketList" >정기권 리스트 : </label>
@@ -26,8 +26,10 @@
                 <option value="180">육개월</option>
                 <option value="365">일년권</option>
             </select><br>
-            <label for="adaptFromNow">당일 적용 여부</label>
-             <input type="checkbox" name="adaptFromNow" value="true"><br>
+            <label for="adaptFromNow">당일 적용 여부 :</label>
+             Y <input type="radio"  name="adaptFromNow"  value="true"> 
+               N <input type="radio"  name="adaptFromNow"  value="false">
+        <br>
             <input type="hidden" name="sortOfTicket" value="seasonTicket">
             <button value="reservation">결제</button>
         </form>
