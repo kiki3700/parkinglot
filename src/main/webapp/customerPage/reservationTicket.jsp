@@ -15,13 +15,17 @@
     <div id="box">
         <h2>예약권 구매</h2>
         <form id="reservationTicketForm" name="reservastionTicketForm" action="./process.jsp" method="GET">
-            <label for="carNumber">차량번호</label>
-            <input type="text" name="carNumber"><br>
+            <label for="carNum">차량번호</label>
+            <input type="text" name="carNumber" required><br>
             <label for="beginOfTicket">예약일자</label>
-            <input type="date" name="beginOfTicket">
-            <input type="hidden" name="endOfTicket" value="1">
-            <input type="hidden" name="sortOfTicket" value="reservation"><br>
+            <input type="date" name="beginOfTicket" required><br>
+            <label for="adaptFromNow">당일 적용 여부</label>
+             <input type="checkbox" name="adaptFromNow" value="true"><br>
             <button value="reservation">결제</button>
+            <input type="hidden" name="period" value="1">
+            <input type="hidden" name="sortOfTicket" value="reservation"><br>
+           
+            
         </form>
         <a href="javascript:history.back()"><button>뒤로가기</button></a>
         <p>주의사항: 대형차량은 사무실을 통해서 예약해주시길 바랍니다. 사무실 전화번호 02-2601-8903</p>

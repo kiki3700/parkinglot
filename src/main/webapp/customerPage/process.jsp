@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="Class.Ticket"%>
     <!DOCTYPE html>
 <html>
     <head>
@@ -15,14 +16,19 @@
 
         <div id="box">
             <h2>결제</h2>
-            <label for="price">가격</label>
-            <output>3,000</output><br>
+            <form action="/Parkinglot/TicketSettlement" >
+            <% String period = request.getParameter("period"); %>
+          	 <label for="price">선택 상품 </label>
+          	 <%= Ticket.getTicketName(Integer.parseInt(period)) %><br>
+       		  <label for="price">가격</label>
+           <%= Ticket.getTicketPrice(Integer.parseInt(period))%>원<br>
             <label for="settlementTool">결제방법</label>
             <select name="settlementTool">
-                <option>카드</option>
-                <option>현금</option>
+                <option value="card">카드</option>
+                <option value="cash">현금</option>
             </select><br>
             <input type="submit" value="결제"><br>
+            </form>
             <a href="javascript:history.back()"><button>뒤로가기</button></a>
         </div>
             

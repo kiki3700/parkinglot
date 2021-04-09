@@ -27,6 +27,15 @@ public class parkinglotTest {
 //}
 	@Test
 	public void timetest() {
-		assertEquals(Database.selectEnterTime("3700"),"2021-04-07 04:21:24");
+//		String queryString = Database.selectQuery("car_informations", "6655");
+//		HashMap<String, String> queryMap = DbUtils.parseData(queryString);
+//		System.out.println(Database.selectEnterTime("6655"));
+//		System.out.println(LocalDateTime.parse(Database.selectEnterTime("6655"),Time.formatter));
+//		
+//		System.out.println(queryMap.get("end_of_ticket"));
+//		System.out.println(Time.formatter);
+//		LocalDateTime.parse(queryMap.get("end_of_ticket"),Time.formatter);
+//		assertEquals(Payment.getPrice("6655","2020-01-01 13:00:00"),5500);
+
 	}	
 }

@@ -68,19 +68,19 @@ public class Database {
 	return result;
 }
 //쿼리 날리기
-	public static String selectQuery(String tableName, String PK)  {
+	public static String selectQuery(String tableName, String car_number)  {
 
 	connect();
 	Statement stmt = null;
 	ResultSet rs = null;
 	String queryResult="";
-	String SQL = "SELECT * FROM "+tableName+" WHERE car_number = "+PK;
+	String SQL = "SELECT * FROM "+tableName+" WHERE car_number = "+car_number;
 	System.out.println(SQL);
 	try {
 	
 	stmt = conn.createStatement();
 	rs = stmt.executeQuery(SQL);
-	rs.next();
+	if(rs.next()) {
 	ResultSetMetaData rsmd = rs.getMetaData();
 	System.out.println(rsmd.getColumnCount());
 	System.out.println(rsmd.getColumnName(1));
@@ -89,6 +89,7 @@ public class Database {
 		queryResult+=rsmd.getColumnName(i)+"="+rs.getString(i);
 		if(i!=rsmd.getColumnCount())
 			queryResult+=",";
+		}
 	}
 	System.out.println(queryResult);
 	}catch(Exception e) {
@@ -100,6 +101,35 @@ public class Database {
 	
 	return queryResult;
 }
+	//쿼리 날리기
+		public static String selectLastQuery(String tableName, String car_number)  {
+
+		connect();
+		Statement stmt = null;
+		ResultSet rs = null;
+		String queryResult="";
+		String SQL = "SELECT * FROM "+tableName+" WHERE car_number = "+car_number+" ORDER BY id LIMIT 1";
+		try {
+		
+		stmt = conn.createStatement();
+		rs = stmt.executeQuery(SQL);
+		if(rs.next()) {
+		ResultSetMetaData rsmd = rs.getMetaData();
+		for(int i=1; i< rsmd.getColumnCount()+1;i++) {
+			queryResult+=rsmd.getColumnName(i)+"="+rs.getString(i);
+			if(i!=rsmd.getColumnCount())
+				queryResult+=",";
+			}
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+
+		}
+		disconnect();
+		
+		
+		return queryResult;
+	}
 
 // 새로운 차 정보 입력
 	public static int newCarInfo(String car_number,String car_size) {
@@ -111,7 +141,6 @@ public class Database {
 			pstmt.setString(1, car_number);
 			pstmt.setString(2, car_size);
 			int r =pstmt.executeUpdate();
-			System.out.println("변경된 row의 개수는"+r);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -130,7 +159,6 @@ public class Database {
 				pstmt.setString(1, enter_time);
 				pstmt.setString(2, car_number);
 				int r =pstmt.executeUpdate();
-				System.out.println("변경된 row의 개수는"+r);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -154,7 +182,6 @@ public class Database {
 				pstmt.setString(4, settlement_tool);
 				pstmt.setString(5, car_number);
 				int r =pstmt.executeUpdate();
-				System.out.println("변경된 row의 개수는"+r);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -174,7 +201,6 @@ public class Database {
 				pstmt.setString(1, exit_time);
 				pstmt.setString(2, car_number);
 				int r = pstmt.executeUpdate();
-				System.out.println(r+"개 행 업데이트 완료");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -194,7 +220,6 @@ public class Database {
 				pstmt.setString(3, end_of_ticket);
 				pstmt.setString(4, car_number);
 				int r = pstmt.executeUpdate();
-				System.out.println(r+"개 행 업데이트 완료");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -212,14 +237,12 @@ public class Database {
 			String queryResult="";
 			String SQL = "SELECT enter_time FROM enter_logs WHERE car_number = "+car_number+" ORDER BY id DESC LIMIT 1";
 			String enter_time=null;
-			System.out.println(SQL);
 			try {
 			
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(SQL);
 			rs.next();
 			enter_time=rs.getString(1);
-			System.out.println(enter_time);
 			}catch(Exception e) {
 				e.printStackTrace();
 
@@ -231,6 +254,7 @@ public class Database {
 			
 		}
 }
+
 
 
 
