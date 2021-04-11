@@ -18,7 +18,7 @@
         	<label>차번호 : </label><%= request.getAttribute("carNum") %><br>
 	        <label>요금 : </label><%= request.getAttribute("price") %> <br>
 	        <label>입차시간 : </label><%= request.getAttribute("enterTime") %> <br>
-	        <label>입차시간 : </label><%= request.getAttribute("exitTime") %> <br>
+	        <label>출차시간 : </label><%= request.getAttribute("exitTime") %> <br>
 	        <label>쿠폰 여부 : </label>
         	<select name="coupon">
 	       		 <option value="no"></option>
@@ -30,7 +30,7 @@
 	        	<option value ="card">카드</option>
 	        	<option value = "cash">현금</option>
 	        </select><br>
-	        <input type="hidden" name="carNum" value="carNum">
+	        <input type="hidden" name="carNum" value="<%= request.getAttribute("carNum") %>">
 	        <input type="hidden" name="price" value="<%= request.getAttribute("price") %>">
 	         <input type="hidden" name="cash" value="0">
 	        <input type="submit">

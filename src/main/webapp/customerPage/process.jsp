@@ -49,6 +49,7 @@
                <input type=hidden name="carNum" value="<%=request.getAttribute("carNum") %>">
              <input type=hidden name="beginOfTicket" value="<%=request.getAttribute("beginOfTicket")%>"> 
             <input type=hidden name="settlementTool" value="card">
+            <input type=hidden name="endOfTicket" value="<%=request.getAttribute("endOfTicket")%>"> 
             <input type=hidden name="period" value="<%=request.getAttribute("period") %>">
             <input type=hidden name="sortOfTicket" value="<%=request.getAttribute("sortOfTicket") %>">
            <input type=hidden name="adaptFromNow" value="<%=request.getAttribute("adaptFromNow") %>"> 

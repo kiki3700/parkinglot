@@ -19,7 +19,7 @@
             <input type="text" name="carNum" required><br>
             <label for="beginOfTicket">예약일자 :</label>
             <input type="date" name="beginOfTicket" required><br>
-            <label for="adaptFromNow">당일 적용 여부 :</label>
+            <label for="adaptFromNow" >당일 적용 여부 :</label>
              Y <input type="radio"  name="adaptFromNow"  value="true"> 
                N <input type="radio"  name="adaptFromNow"  value="false">
         <br>

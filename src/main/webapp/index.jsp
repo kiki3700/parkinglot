@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page import ="Class.Admin" %>
+<%@page import ="Class.ParkingSpace" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,8 +9,8 @@
         <link rel="stylesheet" href="./resources/css/style.css">
         <title>index</title>
     </head>
-    <body>
-    
+    <body>   
+
     <div id="box">
     <h2>well come to index page!</h2>
     <ul>

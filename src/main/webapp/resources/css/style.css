@@ -1,12 +1,13 @@
 @charset "UTF-8";
 body{
-	background-image: url("https://pbs.twimg.com/media/Ddyfl16VwAAQCZj?format=jpg&name=medium");
+		background-image: url("https://pbs.twimg.com/media/Ddyfl16VwAAQCZj?format=jpg&name=medium");
 	background-color: skyblue;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 98vh;
+
 }
 a{
 	 text-decoration:none;
