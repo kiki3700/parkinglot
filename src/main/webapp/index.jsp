@@ -12,7 +12,8 @@
     <body>   
 
     <div id="box">
-    <h2>well come to index page!</h2>
+    <h2>welcome to index page!</h2>
+    <p>주의 차번호는 4자릿 수 숫자를 권장합니다.</p>
     <ul>
         <li><a href="./customerPage/customerPOS.jsp">무인 계산기</a></li>
         <li><a href="./simulator.jsp">시뮬레이터</a></li>

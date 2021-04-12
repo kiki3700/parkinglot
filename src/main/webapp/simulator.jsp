@@ -28,7 +28,7 @@
                 <option value="big">대형</option>
             </select><br>
             <label for="enterTime">입차시간</label>
-            <input type="date" name="date" required> <input type="time"  name="time" required><br>
+            <input type="date" name="date"> <input type="time"  name="time"><br>
             <input type="submit" value="제출"><br>
             <% String a="";
             		if(request.getAttribute("result")!=null){
@@ -44,7 +44,7 @@
             <label for="carNum">차번호 :</label>
             <input type="text" name="carNum"><br>
              <label for="enterTime">출차 시간</label>
-            <input type="date" name="date" required> <input type="time"  name="time" required><br>
+            <input type="date" name="date"> <input type="time"  name="time"><br>
             <input type="submit" value="제출">
         </form>
         <a href="javascript:history.back()"><button>뒤로가기</button></a>

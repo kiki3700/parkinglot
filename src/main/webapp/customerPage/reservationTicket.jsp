@@ -20,7 +20,7 @@
             <label for="beginOfTicket">예약일자 :</label>
             <input type="date" name="beginOfTicket" required><br>
             <label for="adaptFromNow" >당일 적용 여부 :</label>
-             Y <input type="radio"  name="adaptFromNow"  value="true"> 
+             Y <input type="radio"  name="adaptFromNow"  value="true" checked> 
                N <input type="radio"  name="adaptFromNow"  value="false">
         <br>
             <button value="reservation">결제</button>

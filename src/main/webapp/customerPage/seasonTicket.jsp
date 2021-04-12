@@ -27,7 +27,7 @@
                 <option value="365">일년권</option>
             </select><br>
             <label for="adaptFromNow">당일 적용 여부 :</label>
-             Y <input type="radio"  name="adaptFromNow"  value="true"> 
+             Y <input type="radio"  name="adaptFromNow"  value="true" checked> 
                N <input type="radio"  name="adaptFromNow"  value="false">
         <br>
             <input type="hidden" name="sortOfTicket" value="seasonTicket">
