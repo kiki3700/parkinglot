@@ -26,3 +26,11 @@ h2{
 label{
 	font-weight : 700;
 }
+
+.textbox{
+	box-shadow: inset 0 2px 4px rgb(186, 189, 182);
+	display: inline;
+	border: 1px solid grey;
+	padding: 2px;
+}
+

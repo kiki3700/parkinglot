@@ -18,10 +18,11 @@
     <h2>시뮬레이터</h2>
         <h3>입차 출차 관련</h3>
 
-            <h4>입차</h4>
+
             <form action="/Parkinglot/simulationEnter" method="GET">
+            <h4>입차</h4>
             <label for="carNum">차번호</label>
-            <input type="text" name="carNum" required><br>
+            <input type="number" name="carNum" required min=1000 max=9999><br>
             <label for="carSize" >차량 크기</label>
             <select name="carSize" required>
                 <option value="small">중소형</option>
@@ -35,19 +36,21 @@
             			a=request.getAttribute("result").toString();
             		}
             		%>
-            <%= a %>
+			<%= a%>
 
             
         </form>
-        <h3>출차</h3>
+        
         <form action="/Parkinglot/simulationExit" method="GET">
+        <h4>출차</h4>
             <label for="carNum">차번호 :</label>
-            <input type="text" name="carNum"><br>
+            <input type="number" name="carNum"  min=1000 max=9999><br>
              <label for="enterTime">출차 시간</label>
             <input type="date" name="date"> <input type="time"  name="time"><br>
             <input type="submit" value="제출">
         </form>
         <a href="javascript:history.back()"><button>뒤로가기</button></a>
+         <a href="/Parkinglot/index.jsp"><button>홈으로</button></a>
     </div>
           
     </body>

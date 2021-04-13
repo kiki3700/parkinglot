@@ -12,8 +12,9 @@
         <div id="box">
         <h2>환영 합니다!</h2>
         <p> 구매할 티켓의 종류를 선택하세요</p>
-        <a href="./reservationTicket.jsp"><button>예약권 구매</button></a><br>
-        <a href="./seasonTicket.jsp"><button>정기권 구매</button></a>
+        <a href="./reservationTicket.jsp"><button>예약권 구매</button></a>
+        <a href="./seasonTicket.jsp"><button>정기권 구매</button></a><br>
+        <a href="javascript:history.back()"><button>뒤로가기</button></a>
         </div>
     </body>
 </html>

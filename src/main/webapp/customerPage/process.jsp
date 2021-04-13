@@ -22,6 +22,8 @@
             <% String period = request.getAttribute("period").toString(); %>
           	 <label for="price">선택 상품 </label>
           	 <%= Ticket.getTicketName(Integer.parseInt(period)) %><br>
+          	 <label for="beginOfTicket">시작일자</label><%=request.getAttribute("beginOfTicket")%> <br>
+          	 <label for="endOfTicket">종료일자</label><%=request.getAttribute("endOfTicket")%> <br>
        		  <label for="price">가격</label>
            <%= Ticket.getTicketPrice(Integer.parseInt(period))%>원<br>
             <label for="settlementTool">결제방법</label>

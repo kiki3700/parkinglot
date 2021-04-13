@@ -15,15 +15,15 @@
     	<div id="box">
         	<h2>정산원 페이지</h2>
         	<form id="settle" action="/Parkinglot/Settlement" method="GET">
-        	<label>차번호 : </label><%= request.getAttribute("carNum") %><br>
-	        <label>요금 : </label><%= request.getAttribute("price") %> <br>
-	        <label>입차시간 : </label><%= request.getAttribute("enterTime") %> <br>
-	        <label>출차시간 : </label><%= request.getAttribute("exitTime") %> <br>
+        	<label>차번호 : </label><p class="textbox"><%= request.getAttribute("carNum") %></p><br>
+	        <label>요금 : </label><p class="textbox"><%= request.getAttribute("price") %></p> <br>
+	        <label>입차시간 : </label><p class="textbox"><%= request.getAttribute("enterTime") %></p> <br>
+	        <label>출차시간 : </label><p class="textbox"><%= request.getAttribute("exitTime") %></p> <br>
 	        <label>쿠폰 여부 : </label>
         	<select name="coupon">
 	       		 <option value="no"></option>
-	       		 <option value="absolute">쿠폰 a</option>
-	         	<option value="relative">쿠폰 b</option>
+	       		 <option value="absolute">10,000원 쿠폰</option>
+	         	<option value="relative">10% 할인권</option>
 	        </select><br>
 	        <label>결제도구 :</label>
 	        <select id="settlementTool" name="settlementTool">

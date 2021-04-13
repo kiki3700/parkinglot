@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="Class.Time" %>
     <!DOCTYPE html>
 <html>
     <head>
@@ -16,9 +18,9 @@
         <h2>정기권 구매</h2>
         <form id="reservationTicketForm" name="reservastionTicketForm" action="/Parkinglot/checkCarInfo" method="GET">
             <label for="carNum">차량번호 : </label>
-            <input type="text" name="carNum" required><br>
+            <input type="number" name="carNum" required min=1000 max=9999><br>
             <label for="beginOfTicket">정기권 시작 일자 : </label>
-            <input type="date" name="beginOfTicket" required><br>
+            <input type="date" name="beginOfTicket" required min="<%= LocalDate.now().format(Time.formatterForDate) %>"><br>
             <label for="seasonTicketList" >정기권 리스트 : </label>
             <select  name="period" required>
                 <option value="30">한달</option>

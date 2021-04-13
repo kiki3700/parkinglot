@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./resources/css/style.css">
         <title>index</title>
     </head>
+    	
     <body>   
 
     <div id="box">
