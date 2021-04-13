@@ -20,17 +20,38 @@ h2{
 #box{
 	box-shadow: 4px 4px grey;
 	padding: 3%;
-	background-color: #fff;
+	background-color:#fff2a7;
 	line-height:2;
+
 }
 label{
 	font-weight : 700;
 }
 
 .textbox{
-	box-shadow: inset 0 2px 4px rgb(186, 189, 182);
+	box-shadow: inset 0 2px 4px #ffc133;
 	display: inline;
-	border: 1px solid grey;
+	border: 1px solid gold;
 	padding: 2px;
 }
+button{
+	background-color:gold;
+	border: 1px solid #ffc133;
+	box-shadow: 2px 2px orange;
+}
+button:hover{
+	background-color:orange;
+	border: 1px solid #ffc133;
+}
+.star{
+	background-color:#FA8A8A;
+	border: 1px solid #E97E7E;
+	box-shadow: 2px 2px #E36767;
+}
+.star:hover{
+	background-color:#E36767;
+	border: 1px solid #E97E7E;
+	box-shadow: 2px 2px #E36767;
+}
+
 

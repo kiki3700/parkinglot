@@ -29,7 +29,7 @@
 				<option value="100">100</option>
 			</select>
 			<input type="number" name="amount" required>
-			<input type="submit" value="click">
+			<input class="star" type="submit" value="click">
 			</form>
 			</li>
 			<li>주차 가능 공간
@@ -42,8 +42,8 @@
 			 	<option value="big">big</option>
 			 	<option value="small">small</option>
 			 </select>
-			 <input type="submit" name="operator" value="plus">
-			  <input type="submit" name="operator" value="minus">
+			 <input class="star" type="submit" name="operator" value="plus">
+			  <input class="star" type="submit" name="operator" value="minus">
 			 </form>
 			 <br>
 			  <a href="/Parkinglot/index.jsp"><button>홈으로</button></a>

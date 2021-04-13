@@ -33,7 +33,7 @@
 	        <input type="hidden" name="carNum" value="<%= request.getAttribute("carNum") %>">
 	        <input type="hidden" name="price" value="<%= request.getAttribute("price") %>">
 	         <input type="hidden" name="cash" value="0">
-	        <input type="submit">
+	        <input class="star" type="submit">
 	        </form>
 	        <script>
             $(document).ready(function(){

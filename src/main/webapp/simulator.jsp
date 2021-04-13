@@ -30,7 +30,7 @@
             </select><br>
             <label for="enterTime">입차시간</label>
             <input type="date" name="date"> <input type="time"  name="time"><br>
-            <input type="submit" value="제출"><br>
+            <input class="star" type="submit" value="제출"><br>
             <% String a="";
             		if(request.getAttribute("result")!=null){
             			a=request.getAttribute("result").toString();
@@ -47,7 +47,7 @@
             <input type="number" name="carNum"  min=1000 max=9999><br>
              <label for="enterTime">출차 시간</label>
             <input type="date" name="date"> <input type="time"  name="time"><br>
-            <input type="submit" value="제출">
+            <input class="star" type="submit" value="제출">
         </form>
         <a href="javascript:history.back()"><button>뒤로가기</button></a>
          <a href="/Parkinglot/index.jsp"><button>홈으로</button></a>

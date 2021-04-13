@@ -25,7 +25,7 @@
              Y <input type="radio"  name="adaptFromNow"  value="true" checked> 
                N <input type="radio"  name="adaptFromNow"  value="false">
         <br>
-            <button value="reservation">결제</button>
+            <button value="reservation">다음</button>
             <input type="hidden" name="period" value="1">
             <input type="hidden" name="sortOfTicket" value="reservation"><br>
            

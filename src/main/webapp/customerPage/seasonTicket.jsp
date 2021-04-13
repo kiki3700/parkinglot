@@ -33,7 +33,7 @@
                N <input type="radio"  name="adaptFromNow"  value="false">
         <br>
             <input type="hidden" name="sortOfTicket" value="seasonTicket">
-            <button value="reservation">결제</button>
+            <button value="reservation">다음</button>
         </form>
         <a href="javascript:history.back()"><button>뒤로가기</button></a>
         <p>주의사항: 대형차량은 정기권 구매가 불가능합니다. 사무실 전화번호 02-2601-8903</p>
